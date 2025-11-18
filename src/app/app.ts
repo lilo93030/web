@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 interface LinkItem {
   title: string;
   link: string;
+  isExternal: boolean;
 }
 
 interface SocialItem {
@@ -37,9 +38,10 @@ export class App {
 
   // external link
   protected externalLinks: LinkItem[] = [
-    { title: 'Angular', link: 'https://angular.dev' },
-    { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-    { title: 'Prompt and AI', link: 'https://angular.dev/ai/develop-with-ai'},
+    { title: 'Intro', link: '/intro', isExternal: false },
+    { title: 'Work', link: '/work', isExternal: false },
+    { title: 'Angular', link: 'https://angular.dev', isExternal: true },
+    { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials', isExternal: true },
   ]
 
   protected socialLinks: SocialItem[] = [
