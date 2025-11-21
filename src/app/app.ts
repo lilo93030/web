@@ -3,6 +3,7 @@ import { RouterOutlet, RouterModule, RouterLink, Routes } from '@angular/router'
 import { IntroComponent } from './pages/intro/intro';
 import { WorkComponent } from './pages/work/work';
 import { QuantComponent} from './pages/quant/quant';
+import { CoffeeComponent } from './pages/coffee/coffee';
 import { CommonModule } from '@angular/common';
 import { routes } from './app.routes';
 
@@ -29,6 +30,7 @@ interface SocialItem {
     IntroComponent,
     WorkComponent,
     QuantComponent,
+    CoffeeComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
@@ -38,10 +40,10 @@ export class App {
 
   // external link
   protected externalLinks: LinkItem[] = [
-    { title: 'Intro', link: '/intro', isExternal: false },
+    { title: 'Home Page', link: '/intro', isExternal: false },
     { title: 'Work', link: '/work', isExternal: false },
-    { title: 'Angular', link: 'https://angular.dev', isExternal: true },
-    { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials', isExternal: true },
+    { title: 'Trader / Quant', link: '/quant', isExternal: false },
+    { title: 'Coffee / Matcha', link: '/coffee', isExternal: false },
   ]
 
   protected socialLinks: SocialItem[] = [
@@ -58,7 +60,7 @@ export class App {
     {
       url: 'https://www.instagram.com/norcalespresso?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr',
       label: 'Instagram',
-      svgPath: 'M12 2.163c3.204 0 3.584.012 4.85.071 1.17.055 1.8.204 2.222.375.641.258 1.176.666 1.627 1.117a4.67 4.67 0 0 1 1.117 1.627c.171.422.32 1.052.375 2.222.059 1.266.071 1.646.071 4.85s-.012 3.584-.071 4.85c-.055 1.17-.204 1.8-.375 2.222a4.67 4.67 0 0 1-1.117 1.627c-.451.451-.86.86-1.627 1.117-.422.171-1.052.32-2.222.375-1.266.059-1.646.071-4.85.071s-3.584-.012-4.85-.071c-1.17-.055-1.8-.204-2.222-.375a4.67 4.67 0 0 1-1.627-1.117 4.67 4.67 0 0 1-1.117-1.627c-.171-.422-.32-1.052-.375-2.222-.059-1.266-.071-1.646-.071-4.85s.012-3.584.071-4.85c.055-1.17.204-1.8.375-2.222a4.67 4.67 0 0 1 1.117-1.627 4.67 4.67 0 0 1 1.627-1.117c.422-.171 1.052-.32 2.222-.375 1.266-.058 1.646-.071 4.85-.071zm0 2.887c-3.117 0-3.486.012-4.72.071-1.07.05-1.559.187-1.898.312a2.88 2.88 0 0 0-1.144.757 2.88 2.88 0 0 0-.757 1.144c-.125.339-.262.828-.312 1.898-.059 1.234-.071 1.603-.071 4.72s.012 3.486.071 4.72c.05 1.07.187 1.559.312 1.898a2.88 2.88 0 0 0 .757 1.144 2.88 2.88 0 0 0 1.144.757c.339.125.828.262 1.898.312 1.234.059 1.603.071 4.72.071s3.486-.012 4.72-.071c1.07-.05 1.559-.187 1.898-.312a2.88 2.88 0 0 0 1.144-.757 2.88 2.88 0 0 0 .757-1.144c.125-.339.262-.828.312-1.898.059-1.234.071-1.603.071-4.72s-.012-3.486-.071-4.72c-.05-1.07-.187-1.559-.312-1.898a2.88 2.88 0 0 0-.757-1.144 2.88 2.88 0 0 0-1.144-.757c-.339-.125-.828-.262-1.898-.312-1.234-.059-1.603-.071-4.72-.071zm0 4.113a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.113a3.113 3.113 0 1 1 0-6.226 3.113 3.113 0 0 1 0 6.226zm5.827-8.113a.965.965 0 1 0 0-1.93.965.965 0 0 0 0 1.93z'
+      svgPath: 'M3 0h18a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3zm9 5.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zm8-3a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z'
     }
   ];
 }

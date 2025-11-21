@@ -1,76 +1,86 @@
 <div class="home">
-  <div class="main-page-header">
-    <div class="left-side-header">
-      <h1>Hello</h1>
-      <p>Welcome to Lilo Yeh's corner</p>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
-    <div class="right-side-header">
-      <div class="pill-group">
-        @for (item of externalLinks; track item.title) {
-          @if (item.isExternal) {
-            <a
-              class="pill"
-              [href]="item.link"
-              target="_blank"
-              rel="noopener"
-            >
-              <span>{{ item.title }}</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="12"
-                viewBox="0 -960 960 960"
-                width="12"
-                fill="blue"
+  <body>
+    <main class="content-wrapper">
+      <div class="main-page-header">
+        <div class="left-side-header">
+          <h1>Hello</h1>
+          <p>Welcome to Lilo Yeh's corner</p>
+        </div>
+        <div class="divider" role="separator" aria-label="Divider"></div>
+        <div class="right-side-header">
+          <div class="pill-group">
+            @for (item of externalLinks; track item.title) {
+              @if (item.isExternal) {
+                <a
+                  class="pill"
+                  [href]="item.link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span>{{ item.title }}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="12"
+                    viewBox="0 -960 960 960"
+                    width="12"
+                    fill="blue"
+                  >
+                    <path
+                      d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                    />
+                  </svg>
+                </a>
+              }
+              
+              @else {
+                <a
+                  class="pill"
+                  [routerLink]="item.link"
+                >
+                  <span>{{ item.title }}</span>
+                </a>
+              }
+                
+            }
+          </div>
+          <div class="social-links">
+            @for (social of socialLinks; track social.label) {
+              <a
+                [href]="social.url"
+                [attr.aria-label]="social.label"
+                target="_blank"
+                rel="noopener"
               >
-                <path
-                  d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
-                />
-              </svg>
-            </a>
-          }
-          
-          @else {
-            <a
-              class="pill"
-              [routerLink]="item.link"
-            >
-              <span>{{ item.title }}</span>
-            </a>
-          }
-            
-        }
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  [attr.alt]="social.label"
+                >
+                  <path [attr.d]="social.svgPath"/>
+                </svg>
+              </a>
+            }
+          </div>
+        </div>
       </div>
-      <div class="social-links">
-        @for (social of socialLinks; track social.label) {
-          <a
-            [href]="social.url"
-            [attr.aria-label]="social.label"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="black"
-              xmlns="http://www.w3.org/2000/svg"
-              [attr.alt]="social.label"
-            >
-              <path [attr.d]="social.svgPath"/>
-            </svg>
-          </a>
-        }
-      </div>
-    </div>
-  </div>
 
-  <!-- Content Area (Router Outlet)-->
-  <main> 
-    <!-- Insert different component -->
-    <router-outlet></router-outlet>
-  </main>
+      <!-- Content Area (Router Outlet)-->
+      
+      <!-- Insert different component -->
+      <router-outlet></router-outlet>
+    </main>
+  </body>
   <footer>
-    &copy; {{ 2025 }} My Portfolio. Designed with Angular Standalone.
-  </footer>
+        <div class="content-wrapper">
+          <p class="copyright-text">
+            &copy; {{ 2025 }} My Portfolio. Designed with Angular Standalone.
+          </p>
+        </div>
+
+        
+        
+      </footer>
 </div>

@@ -1,0 +1,55 @@
+main {
+    display: grid;
+    
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+        "header"
+        "subheading"
+        "amat-work-grid-container";
+    gap: 5px;
+}
+
+h1 {
+    grid-area: header;
+    text-align: left;
+}
+
+h2 {
+    grid-area: subheading;
+    text-align: left;
+}
+.amat-work-title {
+    // border: 3px solid rgb(255, 149, 0);
+    // min-height: 150px;
+}
+.amat-work-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "left right";
+    gap: 5px;
+    // border: 3px solid rgb(0, 255, 136);
+    // min-height: 150px;
+
+}
+.left-side-work-container {
+    grid-area: left;
+    // border: 3px solid blue;
+    // min-height: 150px;
+
+}
+.right-side-work-container {
+    grid-area: right;
+    // border: 3px solid red;
+    // min-height: 150px;
+}
+.amat-work-project {
+    text-align: left;
+}
+
+.certificate-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}

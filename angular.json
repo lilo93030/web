@@ -18,6 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/web",
+            "baseHref": "/web/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
