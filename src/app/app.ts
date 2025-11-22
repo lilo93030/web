@@ -42,8 +42,8 @@ export class App {
   protected externalLinks: LinkItem[] = [
     { title: 'Home Page', link: '/intro', isExternal: false },
     { title: 'Work', link: '/work', isExternal: false },
-    { title: 'Trader / Quant', link: '/quant', isExternal: false },
-    { title: 'Coffee / Matcha', link: '/coffee', isExternal: false },
+    // { title: 'Trader / Quant', link: '/quant', isExternal: false },
+    // { title: 'Coffee / Matcha', link: '/coffee', isExternal: false },
   ]
 
   protected socialLinks: SocialItem[] = [

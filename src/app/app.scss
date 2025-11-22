@@ -1,5 +1,4 @@
 /* 1. Ensure the overall app container is a grid for layout purposes */
-
 :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --french-violet: oklch(49.378% 0.28298 285.103);
@@ -144,7 +143,7 @@ footer {
     --pill-accent: var(--french-violet);
 }
 .pill-group .pill:nth-child(6n + 2) {
-    --pill-accent: var(--electric-violet);
+    --pill-accent: var(--sapphire-blue);
 }
 .pill-group .pill:nth-child(6n + 3) {
     --pill-accent: var(--bright-blue);

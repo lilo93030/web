@@ -13,5 +13,5 @@ export const routes: Routes = [
   // The Default Route (must be last)
   // When path is empty (just the domain name)
   // redirectTo /intro
-  { path: '', redirectTo: 'intro', pathMatch: 'full' },
+  { path: '', redirectTo: 'work', pathMatch: 'full' },
 ];

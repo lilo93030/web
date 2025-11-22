@@ -1,37 +1,25 @@
-.amat-work-title {
-    // border: 3px solid rgb(255, 149, 0);
-    // min-height: 150px;
-    padding: 5px;
-    .amat-header {
-        display: flex;
-        align-items: self-end;
-        gap: 20px;
-        width: 200px;
-        height: 60px;
-        object-fit: contain;
-        max-width: 100%;
-    }
+.amat-header {
+    width: 200px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 50px;
+    max-width: 100%;
 }
-.amat-work-grid-container {
+
+.amat-work-summary {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "left right";
     gap: 5px;
-    // border: 3px solid rgb(0, 255, 136);
-    // min-height: 150px;
     padding: 5px;
 
 }
 .left-side-work-container {
     grid-area: left;
-    // border: 3px solid blue;
-    // min-height: 150px;
 }
 .right-side-work-container {
     grid-area: right;
-    // border: 3px solid red;
-    // min-height: 150px;
 }
 .amat-work-project {
     text-align: left;
@@ -45,4 +33,11 @@
 
 .read-more {
     padding-top: 20px;
+}
+
+p {
+    margin: 0;
+    color: var(--gray-700);
+    line-height: 2;
+    padding: 1px;
 }
